@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.IO;
 using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
@@ -11,7 +13,7 @@ namespace Playground
         static async Task Main(string[] args)
         {
             Console.WriteLine($"Starting... {Environment.MachineName}");
-            
+
             using (var wsClient = new ClientWebSocket())
             {
                 await wsClient.ConnectAsync(new Uri("ws://host.docker.internal:8080"), new CancellationToken());
@@ -23,7 +25,6 @@ namespace Playground
 
             Console.Write(" Done");
             Thread.Sleep(Timeout.Infinite);
-            Console.Write(" Sera?");
         }
     }
 }
