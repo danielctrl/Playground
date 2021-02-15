@@ -1,0 +1,36 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET - LogFileTailReading",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build LogFileTailReading",
+            "program": "${workspaceFolder}/src/LogHandlingApps/LogFileTailReading/bin/Debug/net5.0/LogFileTailReading.dll",
+            "args": ["C:/Users/u0174312/source/repos/PlaygroundAtScale/src/Logs/log.txt"],
+            "cwd": "${workspaceFolder}/src/LogHandlingApps/LogFileTailReading",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": ".NET - Playground",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build Playground",
+            "program": "${workspaceFolder}/src/PlaygroundAtScale/bin/Debug/net5.0/Playground.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/PlaygroundAtScale",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}
